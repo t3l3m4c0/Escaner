@@ -12,12 +12,12 @@ estado_ip=$(nmap -p $puerto $ip | grep $puerto | awk '{print $2}')
 
 
 if [ "$estado_ip" = "open" ]; then
-	echo "$ip Puerto Winbox OPEN" >> log.txt
-	echo "$ip Puerto Winbox OPEN"
+	echo "$ip Puerto $puerto OPEN" >> log.txt
+	echo "$ip Puerto $puerto OPEN"
 elif [ "$estado_ip" = "closed" ]; then
-	echo "$ip Puerto Winbox CLOSED"
+	echo "$ip Puerto $puerto CLOSED"
 elif [ "$estado_ip" = "filtered" ]; then
-	echo "$ip Puerto Winbox FILTRADO"
+	echo "$ip Puerto $puerto FILTRADO"
 else
 	echo "$ip Algo a fallado con la salida de nmap"
 fi
