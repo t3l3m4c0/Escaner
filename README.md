@@ -1,2 +1,2 @@
 # Escaner
-Escáner de red para localizar y loguear puertos abiertos
+Escáner de red para localizar y log de ip + puertos abiertos
